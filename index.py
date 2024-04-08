@@ -31,3 +31,22 @@ def sortArray(arr):
 
 
 # print(sortArray([32,34,5,2,7,38,55,23,56,0]))
+
+# binary search
+
+def binary_search(arr,item):
+    initial_index = 0
+    final_index =  len(arr) - 1
+    while initial_index <= final_index:
+        mid_index  = (initial_index + final_index) //  2
+        guess = arr[mid_index]
+        if guess == item:
+            return mid_index
+        elif guess > item:
+            final_index = mid_index - 1
+        else:
+            initial_index =  mid_index  +  1 
+    return None
+
+test_array = [2,3,5,6,7,8,33,45]
+print(binary_search(test_array,45))
