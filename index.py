@@ -49,4 +49,41 @@ def binary_search(arr,item):
     return None
 
 test_array = [2,3,5,6,7,8,33,45]
-print(binary_search(test_array,45))
+# print(binary_search(test_array,45))
+
+# mergesort
+
+def totalSum(arr):
+    total  = 0
+    for i in arr:
+        total += i
+    return total
+
+array  =  [2,9,5,1,4,7]
+# print(totalSum(array))
+
+
+#recursion
+def sumArray(array,index=0):
+    if index == len(array):
+        return 0
+    else:
+        total = array[index]
+        index += 1
+        return total + sumArray(array,index)
+
+# print(sumArray(array))
+
+#quick sort in python
+def quicksort(array):
+    if len(array) < 2:
+        return array
+    else:
+        pivot = array[0]
+        less =  [num for num in array[1:] if num <= pivot]
+        greater = [num for num in array[1:] if num > pivot]
+        return quicksort(less) + [pivot] + quicksort(greater)
+
+quick_array = [3,7,0,5,32,56,2]
+# print(quicksort(quick_array))
+
