@@ -87,3 +87,4 @@ def quicksort(array):
 quick_array = [3,7,0,5,32,56,2]
 # print(quicksort(quick_array))
 
+# hi pushkar is coding
